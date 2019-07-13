@@ -44,3 +44,5 @@ mph
 include/jcrl/*.h
 include/jcrl/*.c
 
+bin/*
+
