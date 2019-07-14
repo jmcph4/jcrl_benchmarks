@@ -1,4 +1,4 @@
-import sys
+from sys import argv
 import math
 import os
 from os import listdir
@@ -57,9 +57,10 @@ def run_test(benchmark_name, num_elems, num_samples=DEFAULT_NUM_TRIALS):
 if __name__ == "__main__":
     if len(argv) != 3:
         print("usage: python run.py [num_elems] [num_trials]")
+        exit(-1)
 
-    num_elems = int(sys.argv[1])
-    num_trials = int(sys.argv[2])
+    num_elems = int(argv[1])
+    num_trials = int(argv[2])
 
     benchmarks = [f for f in listdir(BENCHMARKS_PATH)]
 

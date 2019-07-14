@@ -10,8 +10,11 @@ CFLAGS = -Wall -Wextra -Wshadow -pedantic-errors -std=$(C_VERSION) -O3 -I$(INC_D
 $(BIN_DIR)/list_append: $(SRC_DIR)/list_append.c
 	$(CC) $^ $(CFLAGS) -o $@
 
+$(BIN_DIR)/queue_push: $(SRC_DIR)/queue_push.c
+	$(CC) $^ $(CFLAGS) -o $@
+
 .PHONY: all
-all: $(BIN_DIR)/list_append
+all: $(BIN_DIR)/list_append $(BIN_DIR)/queue_push
 
 .PHONY: clean
 clean:
